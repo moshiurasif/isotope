@@ -1,0 +1,29 @@
+.portfolio-menu{}
+.portfolio-menu ul{
+    padding: 20px 0;
+}
+.portfolio-menu ul li{
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 2px 20px;
+    border: 1px solid darkred;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.portfolio-menu ul li.active{
+	background:darkred;
+	color: #fff;
+}
+.portfolio-menu ul li:hover{
+	background:darkred;
+	color: #fff;
+}
+.portfolio-item{
+	
+width: 100%;
+}
+.item{
+float: left;
+padding: 2px;
+}

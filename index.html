@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- media query linkup -->
+    <link rel="stylesheet" href="css/media.css">
+    <!-- font awesome -->
+    <script src="js/all.js"></script>
+
+    <title>jquery practice</title>
+  </head>
+  <body>
+    <!-- Your content here -->
+     <div class="portfolio text-center">
+     	<div class="container">
+     		<div class="row justify-content-center">
+     			<div class="col-md-12">
+     				<div class="portfolio-menu">
+     					<ul class="list-inline">
+     						<li class="list-inline-item active" data-filter="*">All</li>
+     						<li class="list-inline-item" data-filter=".web">Web Design</li>
+     						<li class="list-inline-item" data-filter=".gra">Graphics</li>
+     						<li class="list-inline-item" data-filter=".ui">UI/UX</li>
+     						<li class="list-inline-item" data-filter=".word">Wordpress</li>
+     					</ul>
+     				</div>
+     			</div>
+     			<div class="col-md-10">
+     				<div class="portfolio-item">
+     					
+     					
+     					<div class="item web ui"><img src="images/img1.jpg" alt=""></div>
+     					<div class="item gra word"><img src="images/img2.jpg" alt=""></div>
+     					<div class="item ui gra web"><img src="images/img3.jpg" alt=""></div>
+     					<div class="item word"><img src="images/img4.jpg" alt=""></div>
+     					<div class="item gra ui"><img src="images/img5.jpg" alt=""></div>
+     					<div class="item web"><img src="images/img6.jpg" alt=""></div>
+     					
+     					
+
+     				</div>
+     		
+     			</div>
+     		</div>
+     		
+     				
+     	</div>
+     </div>
+
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <!-- plugins -->
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- custom js file -->
+    <script src="js/script.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		$(".portfoilo-item").isotope({
+        itemSelector: '.item',
+        layoutMode: 'fitRows',
+    });
+    
+    $('ul li').click(function(){ 
+        
+      $("ul li").removeClass("active");
+      $(this).addClass("active");        
+
+        var selector = $(this).attr('data-filter'); 
+        $(".portfolio-item").isotope({ 
+            filter: selector, 
+            animationOptions: { 
+                duration: 750, 
+                easing: 'linear', 
+                queue: true, 
+            } 
+        }); 
+      return true; });
+
+    	});
+    </script>
+  </body>
+</html>
